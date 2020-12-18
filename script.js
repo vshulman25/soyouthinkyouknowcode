@@ -1,4 +1,4 @@
-/ variables to keep track of time and question state
+// variables to keep track of time and question state//
 var currentQuestionIndex = 0;
 var time = questions.length * 10;
 var timerId;
@@ -36,7 +36,20 @@ function start() {
 function getQuestion() {
   // get current question object from array
   var currentQuestion = questions[currentQuestionIndex];
-​
+  var questions = [
+  {
+    title: "What do the Jenners actually do?:",
+    choices: ["I don't know", "Astronauting", "nothing", "banking"],
+    answer: "I don't know"
+  },
+  {
+    title: "The condition in an if / else statement is enclosed within ____.",
+    choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+    answer: "parentheses"
+  }
+]  
+
+
   // update title with current question
   
   
@@ -99,6 +112,4 @@ startBtn.onclick = startQuiz;
 ​
 initialsEl.onkeyup = checkForEnter;
 Collapse
-
-
 
