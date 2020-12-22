@@ -20,3 +20,7 @@ Timed code quiz that allows user to view multiple choice questions and select th
 
 Developer - Victoria Shulman 
 
+ - [ ] Complete questions, add 3 more
+     - [ ] Fix first two
+- [ ] High score elements 
+    - [ ] need to add area for initals and saving HS

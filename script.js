@@ -18,7 +18,17 @@ var questions = [
     title: "The condition in an if / else statement is enclosed within ____.",
     choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
     answer: "parentheses"
-  }
+  },
+  {
+    title: "What does MDN stand for?",
+    choices: ["Monsters drink neat", "Astronauting", "nothing", "banking"],
+    answer: "I don't know"
+  },
+  {
+    title: "What do the Jenners actually do?:",
+    choices: ["I don't know", "Astronauting", "nothing", "banking"],
+    answer: "I don't know"
+  },
 ]
 
 var time = questions.length * 10; // also keep track of state
@@ -64,11 +74,13 @@ function getQuestion() {
     var answerOption = document.createElement("button");
     answerOption.setAttribute("class", "choice");
     answerOption.setAttribute("value", choice);
-    answerOption.textContent = index + 1 + " " +  choice;
+    answerOption.textContent = index + 1 + " " +  choice;  // computer is dumb and would start at 0, this formats question 
 
     answerOption.onclick = questionClick;
     choicesEl.appendChild(answerOption);
-  })
+
+  });
+
 
   // attach click event listener to each choice
 
@@ -96,7 +108,7 @@ function questionClick() {
     feedbackEl.textContent = "Correct!";
   }
 
-
+feedbackEl.setAttribute("class", "feedback");
   // move to next question
   currentQuestionIndex++;
 
@@ -119,7 +131,11 @@ function quizEnd() {
   var final = document.getElementById("final-score");
   final.textContent = time;
 
+  var end = document.getElementById("end-screen");
+  end.removeAttribute("class");
 
+
+questionsEl.setAttribute("class", "hide");
 
 
 }
@@ -128,12 +144,28 @@ function quizEnd() {
 
 // save score function - grab value (var initals = grab value) (value.trim) and push new score to local storage and create getScore from local storage
 // 
-var userScore = {
-  score: time, 
-  initials: initials,
-}
+
+function saveHighscore (){
+  var initials = initialsEl.value.trim();
+  console.log(initials);
+  var highScores = JSON.parse(window.localStorage.getItem("highScores")) || []
+
+
+  var userScore = {
+    score: time, 
+    initials: initials,
+    
+  }
+highScores.push(userScore);
+window.localStorage.setItem("highScores", JSON.stringify(highScores));
+
+window.location.href = "./highscore.html";
+
+};
+
+
 // user clicks button to submit initials
-// submitBtn.onclick = saveHighscore;
+submitBtn.onclick = saveHighscore;
 
 // user clicks button to start quiz
 startBtn.onclick = start;
