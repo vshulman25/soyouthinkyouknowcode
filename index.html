@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Coding Quiz</title>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>TIMED CODE QUIZ</title>
+  ​
+  <link rel="stylesheet" href="./style.css">
+</head>
 ​
-    <link rel="stylesheet" href="./style.css">
-  </head>
-​
-  <body>
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
-​
-    <div class="timer">Time: <span id="time">0</span></div>
-​
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>Super Trivia Quiz Thing</h1>
-        <p>
-          Try to answer the following questions within the time
-          limit. Keep in mind that incorrect answers will penalize your
-          score/time by ten seconds!
-        </p>
-        <button id="start">Start This Shit</button>
-      </div>
-​
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-​
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-​
-      <div id="feedback" class="feedback hide"></div>
+
+<body>
+  <div class="scores"><a href="highscores.html">View Highscores</a></div>
+  ​
+  <div class="timer">Time: <span id="time">0</span></div>
+  ​
+  <div class="wrapper">
+    <div id="start-screen" class="start">
+      <h1>So, you think you know code?</h1>
+      <p>
+        This timed quiz will ask you a series of code
+        related questions. Answer them quickly and to the best
+        of your ability. Remember, you will be penalized by 10 seconds
+        with each incorrect answer.
+      </p>
+      <button id="start">No keys, push to start.</button>
     </div>
-​
-    <script src="./script.js"></script>
-  </body>
+    ​
+    <div id="questions" class="hide">
+      <h2 id="question-title"></h2>
+      <div id="choices" class="choices"></div>
+    </div>
+    ​
+    <div id="end-screen" class="hide">
+      <h2>All done!</h2>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <p>
+        Enter initials: <input type="text" id="initials" max="3" />
+        <button id="submit">Submit</button>
+      </p>
+    </div>
+    ​
+    <div id="feedback" class="feedback hide"></div>
+  </div>
+  ​
+  <script src="./script.js"></script>
+</body>
+
 </html>
