@@ -40,11 +40,11 @@ Use preferred code reader and browser to view HTML, JS CSS & README files.
 
 ## Preview 
 
-![Code Quiz - Start](.assets/start.jpeg)
-![Code Quiz - Question](.assets/question.jpeg)
-![Code Quiz - Quiz end](.assets/quizend.jpeg)
-![Code Quiz - Done](.assets/done.jpeg)
-![Code Quiz - Highscore](.assets/highscore.jpeg)
+![Code Quiz - Start](./assets/start.jpeg)
+![Code Quiz - Question](./assets/question.jpeg)
+![Code Quiz - Quiz end](./assets/quizend.jpeg)
+![Code Quiz - Done](./assets/done.jpeg)
+![Code Quiz - Highscore](./assets/highscore.jpeg)
 
 ---
 
